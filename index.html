@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPT-агент за 7 дней — для малого и среднего бизнеса</title>
+  <meta name="description" content="Сократите рутину и ускорьте процессы: диагностика, тестовый GPT-агент и понятный план за 3–7 дней. Для владельцев частного и МСБ.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "name": "Внедрение GPT-агентов для малого и среднего бизнеса",
+        "description": "Сократите рутину и ускорьте процессы: диагностика, тестовый GPT-агент и понятный план за 3–7 дней. Для владельцев частного и МСБ.",
+        "url": "https://t.me/neuro_for_me",
+        "serviceType": "Разработка и внедрение GPT-агентов под бизнес-процессы",
+        "areaServed": { "@type": "Country", "name": "Россия" },
+        "offers": {
+          "@type": "Offer",
+          "description": "Диагностика, разбор задачи, тестовый GPT-агент за 3–7 дней"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "url": "https://t.me/neuro_for_me",
+          "availableLanguage": "Russian"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Это не слишком дорого для малого бизнеса?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Дороже по факту — продолжать оплачивать часы людей на задачи, которые можно закрыть агентом. Стоимость оцениваем после разбора задачи."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Мы не техническая компания.",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Не нужно быть IT-компанией: важны процесс и данные. Настройка и запуск — на моей стороне, вам — понятный сценарий использования."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Что если не зайдёт?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Именно для этого пилот: вы видите результат до крупных вложений. Если эффекта нет — это фиксируется на тесте, а не «после полугода внедрения»."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script>
+(function () {
+  try {
+    var savedTheme = localStorage.getItem('theme');
+    var theme = (savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : 'dark';
+    document.documentElement.dataset.theme = theme;
+  } catch (e) {
+    document.documentElement.dataset.theme = 'dark';
+  }
+})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero section" id="top">
+    <div class="container">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Переключить на светлую тему">
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">☀️</span>
+      </button>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Для владельцев частного, малого и среднего бизнеса</p>
+          <h1 class="hero-headline" id="heroHeadline">
+            <span
+              class="hero-headline__primary js-shiny-text"
+              data-speed="2"
+              data-delay="0"
+              data-color="var(--hero-shine-base)"
+              data-shine="var(--hero-shine-highlight)"
+              data-spread="120"
+              data-direction="left"
+              data-yoyo="false"
+              data-pause-hover="false"
+              data-disabled="false"
+            >За 3–7 дней —</span>
+            <span
+              class="hero-headline__secondary js-shiny-text"
+              data-speed="2.7"
+              data-delay="0.12"
+              data-color="var(--hero-shine-base)"
+              data-shine="var(--hero-shine-highlight)"
+              data-spread="120"
+              data-direction="left"
+              data-yoyo="false"
+              data-pause-hover="false"
+              data-disabled="false"
+            >рабочий GPT-агент под вашу задачу: меньше ручной работы, быстрее решения и контроль над процессом</span>
+          </h1>
+          <p class="subtitle">Не «поиграться с нейросетью», а понятный результат: что автоматизировать первым и окупится ли это уже на пилоте.</p>
+          <p class="trust">Типовые зоны: договоры и документы, заявки и ответы клиентам, отчёты и аналитика, контент и внутренние регламенты.</p>
+          <div class="offer-card">
+            <p class="offer-card-title">Старт без долгого внедрения</p>
+            <ul class="offer-card-list">
+              <li>Диагностика: где теряются время и деньги</li>
+              <li>Разбор задачи и формата агента</li>
+              <li>Тестовый GPT-агент на ваших данных — видно сразу, есть ли смысл масштабировать</li>
+            </ul>
+          </div>
+          <div class="hero-cta">
+            <a href="https://t.me/neuro_for_me" class="btn btn-primary main-cta" target="_blank" rel="noopener noreferrer">Получить разбор задачи в Telegram</a>
+            <p class="offer-note">Нажимая кнопку, вы соглашаетесь с условиями <a href="/offer.html" target="_blank" rel="noopener noreferrer">договора оферты</a></p>
+            <p class="hero-cta-note">Ответ по заявке — в течение рабочего дня</p>
+            <a href="#problem" class="text-link">Где бизнес теряет деньги без автоматизации →</a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-frame">
+            <img class="hero-photo" src="images/hero.png" width="480" height="640" alt="Специалист по внедрению GPT-агентов" decoding="async" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal-section" id="problem">
+      <div class="container container--narrow">
+        <h2>Что болит у владельца и команды</h2>
+        <article class="card card-wide">
+          <p class="card-lead">Рутина не масштабируется: пока вы вручную закрываете типовые задачи, конкуренты успевают быстрее тестировать и продавать.</p>
+          <ul class="list-compact">
+            <li>Часы уходят на документы, таблицы и ответы вместо развития продукта и продаж</li>
+            <li>Ошибки и задержки в типовых процессах повторяются из месяца в месяц</li>
+            <li>«Внедрить AI» откладывается — нет ясной задачи и понятного первого шага</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal-section" id="solution">
+      <div class="container container--narrow">
+        <h2>Как это решается: агент под ваш процесс</h2>
+        <article class="card card-wide">
+          <p>GPT-агент — это не абстрактный чат, а сценарий под вашу работу: входные данные, шаги, результат. Без привязки к задаче и метрике AI обычно «не заходит» в бизнес — поэтому начинаем с конкретики и пилота.</p>
+          <ul class="list-compact list-spaced">
+            <li><strong>Задача.</strong> Один узкий процесс, где виден эффект в деньгах или часах.</li>
+            <li><strong>Настройка.</strong> Промпты и логика под ваши документы и правила, а не общие ответы из интернета.</li>
+            <li><strong>Пилот.</strong> Проверка на реальных кейсах до крупных затрат на внедрение.</li>
+          </ul>
+          <p class="card-footnote">По запросу — обучение сотрудников работе с агентом и AI в ваших процессах.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal-section" id="proof">
+      <div class="container container--narrow">
+        <h2>Примеры результатов</h2>
+        <article class="card card-wide">
+          <div class="case-lines">
+            <p><strong>Договоры и юрблок.</strong> Было: ручной разбор. Стало за 3 дня: структура договоров и выявление рисковых зон.</p>
+            <p><strong>Продажи.</strong> Было: разрозненные отчёты. Стало: видны регионы-лидеры и точки, где «лежит» прибыль.</p>
+            <p><strong>Команда и сервис.</strong> Было: рутина и перегруз. Стало: часть повторяющихся ответов и задач закрывает агент.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--offer reveal-section" id="offer">
+      <div class="container container--narrow">
+        <h2>Что входит в работу со мной</h2>
+        <ul class="deliverables">
+          <li>Разбор вашей задачи и оценка, где автоматизация даст максимум</li>
+          <li>Проектирование и сбор GPT-агента под согласованный процесс</li>
+          <li>Тестовый запуск и критерии: «работает / не работает» без догадок</li>
+          <li>Инструкции для команды простым языком</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section reveal-section" id="process">
+      <div class="container container--narrow">
+        <h2>Что будет после заявки</h2>
+        <ol class="steps card card-wide">
+          <li><strong>Связь в Telegram:</strong> уточняю контекст и цель.</li>
+          <li><strong>Короткий разбор:</strong> где теряются время и деньги, нужен ли агент.</li>
+          <li><strong>Пилот:</strong> тестовый агент на реальной задаче.</li>
+          <li><strong>Решение:</strong> масштабируем то, что подтвердилось на тесте.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section reveal-section" id="faq">
+      <div class="container container--narrow">
+        <h2>Вопросы, которые задают владельцы</h2>
+        <dl class="faq-list">
+          <dt>Это не слишком дорого для малого бизнеса?</dt>
+          <dd>Дороже по факту — продолжать оплачивать часы людей на задачи, которые можно закрыть агентом. Стоимость оцениваем после разбора задачи.</dd>
+          <dt>Мы не техническая компания.</dt>
+          <dd>Не нужно быть IT-компанией: важны процесс и данные. Настройка и запуск — на моей стороне, вам — понятный сценарий использования.</dd>
+          <dt>Что если не зайдёт?</dt>
+          <dd>Именно для этого пилот: вы видите результат до крупных вложений. Если эффекта нет — это фиксируется на тесте, а не «после полугода внедрения».</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section cta-section reveal-section" id="cta">
+      <div class="container container--narrow">
+        <h2>Готовы разобрать вашу задачу</h2>
+        <p class="section-text">Один шаг — заявка в Telegram. Кратко опишите процесс или боль: отвечу с предложением по следующему шагу.</p>
+        <a href="https://t.me/neuro_for_me" class="btn btn-primary btn-large main-cta" target="_blank" rel="noopener noreferrer">Получить разбор задачи в Telegram</a>
+        <p class="offer-note">Нажимая кнопку, вы соглашаетесь с условиями <a href="/offer.html" target="_blank" rel="noopener noreferrer">договора оферты</a></p>
+        <p class="cta-trust">Без рассылок и навязанных пакетов — только по сути вашей задачи.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container container--narrow">
+      <a href="/offer.html" target="_blank" rel="noopener noreferrer">Договор оферты</a>
+    </div>
+  </footer>
+
+  <button class="sticky-cta" id="stickyCta" type="button" aria-hidden="true" aria-label="Получить разбор задачи в Telegram">
+    Получить разбор задачи в Telegram
+  </button>
+
+  <script>
+(function () {
+  var rootEl = document.getElementById("heroHeadline");
+  if (!rootEl) return;
+
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var isVisible = false;
+  var rafId = 0;
+  var items = [];
+
+  function toBool(value) {
+    return String(value) === "true";
+  }
+
+  function setupItem(el) {
+    var speed = Number(el.dataset.speed || 2);
+    var delay = Number(el.dataset.delay || 0);
+    var color = el.dataset.color || "var(--hero-shine-base)";
+    var shineColor = el.dataset.shine || "var(--hero-shine-highlight)";
+    var spread = Number(el.dataset.spread || 120);
+    var direction = el.dataset.direction === "left" ? 1 : -1;
+    var yoyo = toBool(el.dataset.yoyo);
+    var pauseOnHover = toBool(el.dataset.pauseHover);
+    var disabled = toBool(el.dataset.disabled);
+
+    var state = {
+      el: el,
+      speed: Math.max(0.4, speed) * 1000,
+      delay: Math.max(0, delay) * 1000,
+      direction: direction,
+      yoyo: yoyo,
+      pauseOnHover: pauseOnHover,
+      disabled: disabled,
+      elapsed: 0,
+      lastTime: null,
+      paused: false
+    };
+
+    el.style.backgroundImage = "linear-gradient(" + spread + "deg, " + color + " 0%, " + color + " 35%, " + shineColor + " 50%, " + color + " 65%, " + color + " 100%)";
+    el.style.backgroundSize = "200% auto";
+    el.style.webkitBackgroundClip = "text";
+    el.style.backgroundClip = "text";
+
+    if (pauseOnHover) {
+      el.addEventListener("mouseenter", function () { state.paused = true; });
+      el.addEventListener("mouseleave", function () { state.paused = false; });
+    }
+    return state;
+  }
+
+  function setDisabledStyles(state, disabledNow) {
+    if (disabledNow) {
+      state.el.style.webkitTextFillColor = "";
+      state.el.style.color = "";
+      state.el.style.backgroundPosition = "";
+    } else {
+      state.el.style.webkitTextFillColor = "transparent";
+      state.el.style.color = "transparent";
+    }
+  }
+
+  function update(now) {
+    var hasActive = false;
+
+    for (var i = 0; i < items.length; i++) {
+      var s = items[i];
+      var shouldDisable = s.disabled || reducedMotion.matches || !isVisible;
+      setDisabledStyles(s, shouldDisable);
+
+      if (shouldDisable || s.paused) {
+        s.lastTime = null;
+        continue;
+      }
+
+      hasActive = true;
+
+      if (s.lastTime === null) {
+        s.lastTime = now;
+        continue;
+      }
+
+      var deltaTime = now - s.lastTime;
+      s.lastTime = now;
+      s.elapsed += deltaTime;
+
+      var animationDuration = s.speed;
+      var delayDuration = s.delay;
+      var progress;
+
+      if (s.yoyo) {
+        var cycleDuration = animationDuration + delayDuration;
+        var fullCycle = cycleDuration * 2;
+        var cycleTime = s.elapsed % fullCycle;
+
+        if (cycleTime < animationDuration) {
+          progress = (cycleTime / animationDuration) * 100;
+        } else if (cycleTime < cycleDuration) {
+          progress = 100;
+        } else if (cycleTime < cycleDuration + animationDuration) {
+          var reverseTime = cycleTime - cycleDuration;
+          progress = 100 - (reverseTime / animationDuration) * 100;
+        } else {
+          progress = 0;
+        }
+      } else {
+        var cycle = animationDuration + delayDuration;
+        var t = s.elapsed % cycle;
+        progress = t < animationDuration ? (t / animationDuration) * 100 : 100;
+      }
+
+      var directedProgress = s.direction === 1 ? progress : 100 - progress;
+      s.el.style.backgroundPosition = (150 - directedProgress * 2) + "% center";
+    }
+
+    if (hasActive) {
+      rafId = window.requestAnimationFrame(update);
+    } else {
+      rafId = 0;
+    }
+  }
+
+  function ensureLoop() {
+    if (!rafId) rafId = window.requestAnimationFrame(update);
+  }
+
+  var textEls = rootEl.querySelectorAll(".js-shiny-text");
+  for (var i = 0; i < textEls.length; i++) {
+    items.push(setupItem(textEls[i]));
+  }
+
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        isVisible = !!(entries[0] && entries[0].isIntersecting);
+        if (isVisible) ensureLoop();
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(rootEl);
+  } else {
+    isVisible = true;
+    ensureLoop();
+  }
+
+  if (typeof reducedMotion.addEventListener === "function") {
+    reducedMotion.addEventListener("change", function () {
+      if (!reducedMotion.matches && isVisible) ensureLoop();
+    });
+  }
+})();
+  </script>
+
+  <script>
+(function () {
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var sections = document.querySelectorAll("main > .section.reveal-section");
+  if (reduced) {
+    sections.forEach(function (el) {
+      el.classList.add("is-visible");
+    });
+    return;
+  }
+  document.documentElement.classList.add("reveal-ready");
+  function markInView(el) {
+    var r = el.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    return r.top < vh * 0.92 && r.bottom > 0;
+  }
+  if (!("IntersectionObserver" in window)) {
+    sections.forEach(function (el) {
+      el.classList.add("is-visible");
+    });
+    return;
+  }
+  sections.forEach(function (el) {
+    if (markInView(el)) el.classList.add("is-visible");
+  });
+  var io = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { root: null, rootMargin: "0px 0px -6% 0px", threshold: 0.06 }
+  );
+  sections.forEach(function (el) {
+    if (!el.classList.contains("is-visible")) io.observe(el);
+  });
+})();
+  </script>
+  <script>
+/*
+To remove this feature:
+Delete everything between PARTICLE SYSTEM START and END
+*/
+/* PARTICLE SYSTEM START */
+(function () {
+  let particlesEnabled = false;
+  if (!particlesEnabled) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) return;
+
+  const canvas = document.createElement("canvas");
+  canvas.className = "ambient-particles";
+  canvas.setAttribute("aria-hidden", "true");
+  document.body.appendChild(canvas);
+
+  const ctx = canvas.getContext("2d", { alpha: true });
+  if (!ctx) return;
+
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+  const MAX_PARTICLES = 140;
+  const AMBIENT_TARGET = 70;
+  const CURSOR_EMIT_COOLDOWN_MS = 22;
+
+  let width = 0;
+  let height = 0;
+  let particles = [];
+  let pointer = { x: 0, y: 0, moved: false };
+  let lastEmit = 0;
+  let rafId = 0;
+  let ambientSpawnAccumulator = 0;
+
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = Math.floor(width * DPR);
+    canvas.height = Math.floor(height * DPR);
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  }
+
+  function trimParticles() {
+    while (particles.length > MAX_PARTICLES) {
+      particles.shift();
+    }
+  }
+
+  function createAmbientParticle() {
+    const radius = 2 + Math.random() * 4;
+    const alpha = 0.03 + Math.random() * 0.05;
+    const speed = 0.015 + Math.random() * 0.035;
+    const angle = Math.random() * Math.PI * 2;
+    return {
+      type: "ambient",
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed,
+      radius: radius,
+      alpha: alpha,
+      life: 12000 + Math.random() * 8000,
+      ttl: 12000 + Math.random() * 8000
+    };
+  }
+
+  function createCursorParticle(x, y) {
+    const radius = 2 + Math.random() * 3;
+    const alpha = 0.08 + Math.random() * 0.08;
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 0.18 + Math.random() * 0.3;
+    return {
+      type: "cursor",
+      x: x + (Math.random() - 0.5) * 8,
+      y: y + (Math.random() - 0.5) * 8,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed,
+      radius: radius,
+      alpha: alpha,
+      life: 900 + Math.random() * 450,
+      ttl: 900 + Math.random() * 450
+    };
+  }
+
+  function seedAmbient() {
+    for (let i = 0; i < AMBIENT_TARGET; i++) {
+      particles.push(createAmbientParticle());
+    }
+    trimParticles();
+  }
+
+  function emitCursorTrail(now) {
+    if (!pointer.moved || now - lastEmit < CURSOR_EMIT_COOLDOWN_MS) return;
+    lastEmit = now;
+    particles.push(createCursorParticle(pointer.x, pointer.y));
+    if (Math.random() > 0.55) {
+      particles.push(createCursorParticle(pointer.x, pointer.y));
+    }
+    trimParticles();
+  }
+
+  function animate(now) {
+    ctx.clearRect(0, 0, width, height);
+
+    ambientSpawnAccumulator += 1;
+    if (particles.length < AMBIENT_TARGET && ambientSpawnAccumulator >= 8) {
+      particles.push(createAmbientParticle());
+      ambientSpawnAccumulator = 0;
+    }
+
+    emitCursorTrail(now);
+
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.life -= 16.67;
+      if (p.life <= 0) {
+        particles.splice(i, 1);
+        continue;
+      }
+
+      if (p.type === "ambient") {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < -8) p.x = width + 8;
+        if (p.x > width + 8) p.x = -8;
+        if (p.y < -8) p.y = height + 8;
+        if (p.y > height + 8) p.y = -8;
+      } else {
+        p.vx *= 0.97;
+        p.vy *= 0.97;
+        p.x += p.vx;
+        p.y += p.vy;
+      }
+
+      const fade = Math.max(0, p.life / p.ttl);
+      const alpha = p.type === "cursor" ? p.alpha * fade * fade : p.alpha * (0.55 + 0.45 * fade);
+      if (alpha <= 0.002) continue;
+
+      ctx.beginPath();
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = p.type === "cursor" ? "#9edcf8" : "#9ab7d8";
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    ctx.globalAlpha = 1;
+    rafId = window.requestAnimationFrame(animate);
+  }
+
+  window.addEventListener("mousemove", function (event) {
+    pointer.x = event.clientX;
+    pointer.y = event.clientY;
+    pointer.moved = true;
+  }, { passive: true });
+
+  window.addEventListener("touchmove", function (event) {
+    if (!event.touches || !event.touches[0]) return;
+    pointer.x = event.touches[0].clientX;
+    pointer.y = event.touches[0].clientY;
+    pointer.moved = true;
+  }, { passive: true });
+
+  window.addEventListener("resize", resize, { passive: true });
+
+  resize();
+  seedAmbient();
+  rafId = window.requestAnimationFrame(animate);
+
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      window.cancelAnimationFrame(rafId);
+      rafId = 0;
+    } else if (!rafId) {
+      rafId = window.requestAnimationFrame(animate);
+    }
+  });
+})();
+/* PARTICLE SYSTEM END */
+  </script>
+  <script>
+(function () {
+  var stickyBtn = document.getElementById("stickyCta");
+  var mainCtas = document.querySelectorAll(".main-cta");
+  if (!stickyBtn || !mainCtas.length) return;
+
+  var ctaTarget = mainCtas[0].getAttribute("href") || "https://t.me/neuro_for_me";
+  var lastScrollY = window.scrollY || 0;
+  var isVisible = false;
+  var nearMainCta = false;
+  var hasActivated = (window.scrollY || 0) > 300;
+  var scrollDebounceTimer = 0;
+
+  function shouldShowSticky() {
+    if (!hasActivated) return false; // До первого прохода порога не показываем
+    if (nearMainCta) return false; // Не дублируем рядом с основной CTA
+    return true;
+  }
+
+  function setStickyVisibility(show) {
+    if (show === isVisible) return;
+    stickyBtn.classList.toggle("show", show);
+    stickyBtn.setAttribute("aria-hidden", show ? "false" : "true");
+    isVisible = show;
+  }
+
+  function evaluateSticky() {
+    var currentScrollY = window.scrollY || 0;
+    var scrollingDown = currentScrollY > lastScrollY;
+    if (!hasActivated && currentScrollY > 300 && scrollingDown) {
+      hasActivated = true; // Активируем только после осознанного скролла вниз
+    }
+    setStickyVisibility(shouldShowSticky());
+    lastScrollY = currentScrollY;
+  }
+
+  function onScrollDebounced() {
+    if (scrollDebounceTimer) window.clearTimeout(scrollDebounceTimer);
+    scrollDebounceTimer = window.setTimeout(function () {
+      evaluateSticky();
+    }, 90);
+  }
+
+  window.addEventListener("scroll", onScrollDebounced, { passive: true });
+  window.addEventListener("resize", evaluateSticky, { passive: true });
+
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      nearMainCta = entries.some(function (entry) { return entry.isIntersecting; });
+      if (nearMainCta) {
+        setStickyVisibility(false);
+      } else {
+        evaluateSticky();
+      }
+    }, { threshold: 0.4 });
+
+    mainCtas.forEach(function (cta) { observer.observe(cta); });
+  }
+
+  stickyBtn.addEventListener("click", function () {
+    if (!ctaTarget) return;
+    if (ctaTarget.charAt(0) === "#") {
+      var targetEl = document.querySelector(ctaTarget);
+      if (targetEl) targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    window.open(ctaTarget, "_blank", "noopener,noreferrer");
+  });
+
+  evaluateSticky();
+})();
+  </script>
+  <script>
+(function () {
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  if (!toggle) return;
+
+  function setTheme(theme) {
+    root.dataset.theme = theme;
+    try {
+      localStorage.setItem('theme', theme);
+    } catch (e) {}
+    toggle.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    toggle.setAttribute('aria-label', theme === 'light' ? 'Переключить на тёмную тему' : 'Переключить на светлую тему');
+  }
+
+  toggle.addEventListener('click', function () {
+    var nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+    setTheme(nextTheme);
+  });
+
+  setTheme(root.dataset.theme || 'dark');
+})();
+  </script>
+</body>
+</html>
